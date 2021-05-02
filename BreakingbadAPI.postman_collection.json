@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "8c079ff5-088e-44f5-82fc-3815d5a7f1f7",
+		"name": "BreakingbadAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getEpisodes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/episodes",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"episodes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
